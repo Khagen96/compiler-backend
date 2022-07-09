@@ -11,7 +11,12 @@ const { executeJava } = require('./executeJava');
 const Job = require("./models/Job");
 
 
-mongoose.connect("mongodb://localhost/compilerapp",{
+
+//mongodb+srv://khagen:1234@cluster0.c1m0n.mongodb.net/compilerapp
+//mongodb://localhost/compilerapp
+
+
+mongoose.connect("mongodb+srv://khagen:1234@cluster0.c1m0n.mongodb.net/compilerapp",{
     useNewUrlParser: true,
     useUnifiedTopology:true,
 },(err)=>{
