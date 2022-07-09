@@ -28,6 +28,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get("/", function(req,res){
+    res.send("Online code compiler backend");
+});
+
 
 app.get("/status", async(req, res) =>{
 
@@ -119,6 +123,6 @@ catch (err){
 });
 
 
-app.listen(5000, ()  => {
+app.listen(process.env.PORT || 5000, ()  => {
     console.log(`Listening on port 5000!`);
 });
